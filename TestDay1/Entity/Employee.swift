@@ -8,15 +8,22 @@
 import Foundation
 
 struct EmployeeList: Decodable{
-    let listEmp = [Employee]()
+    var listEmp = [Employee]()
+    
+    enum CodingKeys: String, CodingKey{
+        case listEmp = "data"
+    }
 }
 
 struct Employee: Decodable{
-    let nama, gaji, umur: String
+    let nama: String
+    let gaji, umur: Int
+    
+    enum CodingKeys: String, CodingKey{
+        case nama = "employee_name"
+        case gaji = "employee_salary"
+        case umur = "employee_age"
+    }
+
 }
 
-enum CodingKeys: String, CodingKey{
-    case nama = "employee_name"
-    case gaji = "employee_salary"
-    case umur = "employee_age"
-}
