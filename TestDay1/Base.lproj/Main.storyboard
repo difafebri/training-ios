@@ -33,13 +33,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="hai :D" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uvU-hk-uDo">
-                                <rect key="frame" x="169" y="692.66666666666663" width="44" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yTp-FS-TqW">
                                 <rect key="frame" x="20" y="833" width="390" height="35"/>
                                 <state key="normal" title="Button"/>
@@ -55,9 +48,8 @@
                                     <navigationItem title="Test bar" id="2KP-3D-Th5"/>
                                 </items>
                             </navigationBar>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gje-Ek-YWZ">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gje-Ek-YWZ">
                                 <rect key="frame" x="54" y="369" width="322" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="rest api"/>
                                 <connections>
@@ -68,8 +60,13 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="yTp-FS-TqW" firstAttribute="top" secondItem="gje-Ek-YWZ" secondAttribute="bottom" constant="429" id="BFs-LW-yMw"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="yTp-FS-TqW" secondAttribute="bottom" constant="30" id="COq-mB-eEJ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yTp-FS-TqW" secondAttribute="trailing" constant="20" id="E7c-K3-G7z"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gje-Ek-YWZ" secondAttribute="trailing" constant="54" id="QA5-bw-ZSQ"/>
+                            <constraint firstItem="gje-Ek-YWZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="54" id="dC7-be-16W"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gje-Ek-YWZ" secondAttribute="trailing" constant="54" id="fwZ-W2-6KY"/>
+                            <constraint firstItem="gje-Ek-YWZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="54" id="ko6-Gg-zMV"/>
                             <constraint firstItem="yTp-FS-TqW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="nY5-5s-7ED"/>
                         </constraints>
                     </view>
@@ -77,7 +74,6 @@
                     <navigationItem key="navigationItem" id="H5u-xd-Rvz"/>
                     <connections>
                         <outlet property="mainButton" destination="yTp-FS-TqW" id="Uaz-Vm-Fz1"/>
-                        <outlet property="mainLabel" destination="uvU-hk-uDo" id="TkA-Ny-aHA"/>
                         <segue destination="Y22-SF-PIM" kind="show" identifier="firstSegue" id="xgX-Fb-yQ0"/>
                     </connections>
                 </viewController>
