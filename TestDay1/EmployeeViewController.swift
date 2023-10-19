@@ -7,40 +7,48 @@
 import Alamofire
 import UIKit
 
-class EmployeeViewController: UIViewController {
+class EmployeeViewController: UIViewController{
     
     @IBOutlet weak var EmployeeTableView: UITableView!
-    
+    var viewModel: EmployeeViewModel!
     var employeeData = [Employee]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         EmployeeTableView.register(
             UINib(nibName: "EmployeeTableViewCell", bundle: nil
-        ), forCellReuseIdentifier: "EmployeeCell")
+                 ), forCellReuseIdentifier: "EmployeeCell")
         
         EmployeeTableView.dataSource = self
         EmployeeTableView.delegate = self
         EmployeeTableView.rowHeight = 80
         
-        guard let url = URL(string: "https://dummy.restapiexample.com/api/v1/employees/") else { return }
-        let urlConvertible: URLConvertible = url
-        AF.request(
-            urlConvertible,
-            method: .get
-        ).response { response in
-            if let dataEmployee = response.data {
-                do{
-                    let res = try JSONDecoder().decode(EmployeeList.self, from: dataEmployee)
-                    self.employeeData = res.listEmp
-                    print(self.employeeData.count)
-                    self.EmployeeTableView.reloadData()
-                } catch let jsonErr{
-                    print("error caught: ", jsonErr)
-                }
-                
-            }
+        // init view model
+        viewModel = EmployeeViewModel()
+        viewModel.bindDataToVC = {
+            self.EmployeeTableView.reloadData()
         }
+        viewModel.fetchData()
+        
+        //        guard let url = URL(string:"https://dummy.restapiexample.com/api/v1/employees/") else { return }
+        //        let urlConvertible: URLConvertible = url
+        //        AF.request(
+        //            urlConvertible,
+        //            method: .get
+        //        ).response { response in
+        //            if let dataEmployee = response.data {
+        //                do{
+        //                    let res = try JSONDecoder().decode(EmployeeList.self, from: dataEmployee)
+        //                    self.employeeData = res.listEmp
+        //                    print(self.employeeData.count)
+        //                    self.EmployeeTableView.reloadData()
+        //                } catch let jsonErr{
+        //                    print("error caught: ", jsonErr)
+        //                }
+        //
+        //            }
+        //        }
+        
     }
 }
         
@@ -65,15 +73,15 @@ class EmployeeViewController: UIViewController {
         
         extension EmployeeViewController: UITableViewDelegate, UITableViewDataSource{
             func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-                return self.employeeData.count
+                return viewModel.employeeData.count
+                /*self.employeeData.count*/
             }
             
             func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-                let cellTable = tableView.dequeueReusableCell(withIdentifier: "EmployeeCell", for: indexPath) as! EmployeeTableViewCell
-                cellTable.isiNama.text = self.employeeData[indexPath.row].nama
-                cellTable.isiUmur.text = String (self.employeeData[indexPath.row].umur)
-                cellTable.isiGaji.text = String (self.employeeData[indexPath.row].gaji)
-                
-                return cellTable
+                let cell = EmployeeTableView.dequeueReusableCell(withIdentifier: "EmployeeCell", for: indexPath) as! EmployeeTableViewCell
+                cell.isiNama.text = viewModel.employeeData[indexPath.row].nama
+                cell.isiUmur.text = String (viewModel.employeeData[indexPath.row].umur)
+                cell.isiGaji.text = String (viewModel.employeeData[indexPath.row].gaji)
+                return cell
             }
         }

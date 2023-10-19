@@ -19,18 +19,18 @@ class ViewController: UIViewController {
     }
 
     @IBAction func buttonClick(_ sender: Any) {
-        nama = mainLabel.text ?? "difa"
+        //nama = mainLabel.text ?? "difa"
         
         performSegue(withIdentifier: "firstSegue", sender: nil)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if(segue.identifier=="firstSegue"){
-            
-        } else {
-            let destination = segue.destination as! EmployeeViewController
-            
-        }
+//        if(segue.identifier=="firstSegue"){
+//            
+//        } else if (segue.identifier=="firstSegue"){
+//            let destination = segue.destination as! EmployeeViewController
+//            
+//        }
        
     }
 }

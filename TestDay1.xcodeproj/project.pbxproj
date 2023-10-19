@@ -25,6 +25,14 @@
 		B2849C492AD9288900A214C3 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2849C482AD9288900A214C3 /* SecondViewController.swift */; };
 		B2849C532AD93A4200A214C3 /* ProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2849C512AD93A4200A214C3 /* ProfileTableViewCell.swift */; };
 		B2849C542AD93A4200A214C3 /* ProfileTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B2849C522AD93A4200A214C3 /* ProfileTableViewCell.xib */; };
+		B2D6F1782AE0C8FC0076210C /* CoreDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B2D6F1762AE0C8FC0076210C /* CoreDataModel.xcdatamodeld */; };
+		B2D6F17A2AE0CF450076210C /* CoreDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D6F1792AE0CF450076210C /* CoreDataViewController.swift */; };
+		B2D6F17D2AE0D01B0076210C /* NewEmployeeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D6F17B2AE0D01B0076210C /* NewEmployeeCell.swift */; };
+		B2D6F17E2AE0D01B0076210C /* NewEmployeeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B2D6F17C2AE0D01B0076210C /* NewEmployeeCell.xib */; };
+		B2D6F1802AE0D0A10076210C /* NewEmployee.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D6F17F2AE0D0A10076210C /* NewEmployee.swift */; };
+		B2D6F1842AE105A60076210C /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D6F1832AE105A60076210C /* APIService.swift */; };
+		B2D6F1872AE108160076210C /* EmployeeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D6F1862AE108160076210C /* EmployeeViewModel.swift */; };
+		B2D6F1892AE115C20076210C /* NewEmployeeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D6F1882AE115C20076210C /* NewEmployeeViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +74,14 @@
 		B2849C482AD9288900A214C3 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		B2849C512AD93A4200A214C3 /* ProfileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewCell.swift; sourceTree = "<group>"; };
 		B2849C522AD93A4200A214C3 /* ProfileTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileTableViewCell.xib; sourceTree = "<group>"; };
+		B2D6F1772AE0C8FC0076210C /* CoreDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreDataModel.xcdatamodel; sourceTree = "<group>"; };
+		B2D6F1792AE0CF450076210C /* CoreDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataViewController.swift; sourceTree = "<group>"; };
+		B2D6F17B2AE0D01B0076210C /* NewEmployeeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewEmployeeCell.swift; sourceTree = "<group>"; };
+		B2D6F17C2AE0D01B0076210C /* NewEmployeeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewEmployeeCell.xib; sourceTree = "<group>"; };
+		B2D6F17F2AE0D0A10076210C /* NewEmployee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewEmployee.swift; sourceTree = "<group>"; };
+		B2D6F1832AE105A60076210C /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		B2D6F1862AE108160076210C /* EmployeeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeViewModel.swift; sourceTree = "<group>"; };
+		B2D6F1882AE115C20076210C /* NewEmployeeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewEmployeeViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +113,7 @@
 		B26D92182AD7907F00FB5EEC = {
 			isa = PBXGroup;
 			children = (
+				B2D6F1762AE0C8FC0076210C /* CoreDataModel.xcdatamodeld */,
 				B26D92232AD7908000FB5EEC /* TestDay1 */,
 				B26D923A2AD7908000FB5EEC /* TestDay1Tests */,
 				B26D92442AD7908000FB5EEC /* TestDay1UITests */,
@@ -117,6 +134,8 @@
 		B26D92232AD7908000FB5EEC /* TestDay1 */ = {
 			isa = PBXGroup;
 			children = (
+				B2D6F1852AE108020076210C /* ViewModel */,
+				B2D6F1822AE1058C0076210C /* APIService */,
 				B2794FE22ADF7B8000B4F496 /* Entity */,
 				B2849C4A2AD938A500A214C3 /* TableViewCell */,
 				B26D92242AD7908000FB5EEC /* AppDelegate.swift */,
@@ -128,6 +147,7 @@
 				B26D92322AD7908000FB5EEC /* Info.plist */,
 				B2849C482AD9288900A214C3 /* SecondViewController.swift */,
 				B2794FF02ADFBAF300B4F496 /* EmployeeViewController.swift */,
+				B2D6F1792AE0CF450076210C /* CoreDataViewController.swift */,
 			);
 			path = TestDay1;
 			sourceTree = "<group>";
@@ -154,6 +174,7 @@
 			children = (
 				B2794FE32ADF7BAD00B4F496 /* Profile.swift */,
 				B2794FE82ADFB56600B4F496 /* Employee.swift */,
+				B2D6F17F2AE0D0A10076210C /* NewEmployee.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -165,8 +186,27 @@
 				B2849C522AD93A4200A214C3 /* ProfileTableViewCell.xib */,
 				B2794FEA2ADFB90B00B4F496 /* EmployeeTableViewCell.swift */,
 				B2794FEB2ADFB90B00B4F496 /* EmployeeTableViewCell.xib */,
+				B2D6F17B2AE0D01B0076210C /* NewEmployeeCell.swift */,
+				B2D6F17C2AE0D01B0076210C /* NewEmployeeCell.xib */,
 			);
 			path = TableViewCell;
+			sourceTree = "<group>";
+		};
+		B2D6F1822AE1058C0076210C /* APIService */ = {
+			isa = PBXGroup;
+			children = (
+				B2D6F1832AE105A60076210C /* APIService.swift */,
+			);
+			path = APIService;
+			sourceTree = "<group>";
+		};
+		B2D6F1852AE108020076210C /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				B2D6F1862AE108160076210C /* EmployeeViewModel.swift */,
+				B2D6F1882AE115C20076210C /* NewEmployeeViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -281,6 +321,7 @@
 			files = (
 				B26D92312AD7908000FB5EEC /* LaunchScreen.storyboard in Resources */,
 				B2794FED2ADFB90B00B4F496 /* EmployeeTableViewCell.xib in Resources */,
+				B2D6F17E2AE0D01B0076210C /* NewEmployeeCell.xib in Resources */,
 				B2849C542AD93A4200A214C3 /* ProfileTableViewCell.xib in Resources */,
 				B26D922E2AD7908000FB5EEC /* Assets.xcassets in Resources */,
 				B26D922C2AD7908000FB5EEC /* Main.storyboard in Resources */,
@@ -312,11 +353,18 @@
 				B2794FF12ADFBAF300B4F496 /* EmployeeViewController.swift in Sources */,
 				B2794FEC2ADFB90B00B4F496 /* EmployeeTableViewCell.swift in Sources */,
 				B2794FE42ADF7BAD00B4F496 /* Profile.swift in Sources */,
+				B2D6F1782AE0C8FC0076210C /* CoreDataModel.xcdatamodeld in Sources */,
+				B2D6F17A2AE0CF450076210C /* CoreDataViewController.swift in Sources */,
+				B2D6F17D2AE0D01B0076210C /* NewEmployeeCell.swift in Sources */,
 				B26D92292AD7908000FB5EEC /* ViewController.swift in Sources */,
+				B2D6F1842AE105A60076210C /* APIService.swift in Sources */,
 				B2794FE92ADFB56600B4F496 /* Employee.swift in Sources */,
 				B26D92252AD7908000FB5EEC /* AppDelegate.swift in Sources */,
+				B2D6F1892AE115C20076210C /* NewEmployeeViewModel.swift in Sources */,
 				B2849C532AD93A4200A214C3 /* ProfileTableViewCell.swift in Sources */,
 				B26D92272AD7908000FB5EEC /* SceneDelegate.swift in Sources */,
+				B2D6F1872AE108160076210C /* EmployeeViewModel.swift in Sources */,
+				B2D6F1802AE0D0A10076210C /* NewEmployee.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -678,6 +726,19 @@
 			productName = Alamofire;
 		};
 /* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		B2D6F1762AE0C8FC0076210C /* CoreDataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				B2D6F1772AE0C8FC0076210C /* CoreDataModel.xcdatamodel */,
+			);
+			currentVersion = B2D6F1772AE0C8FC0076210C /* CoreDataModel.xcdatamodel */;
+			path = CoreDataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = B26D92192AD7907F00FB5EEC /* Project object */;
 }
